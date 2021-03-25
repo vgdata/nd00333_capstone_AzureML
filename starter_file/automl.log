@@ -1,0 +1,204 @@
+2021-03-12 14:04:35.599 - INFO - 5771 - azureml.train.automl.automlconfig._start_execution:211 - Submitting remote.
+2021-03-12 14:47:49.185 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 14:47:49.238 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 14:47:49.247 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-03-12 14:47:49.370 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=123.47[ms]
+2021-03-12 14:47:49.370 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=132.79[ms]
+2021-03-12 14:47:49.371 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-03-12 14:47:59.091 - INFO - 5771 - azureml.automl.runtime.distributed.utilities.horovod_initialized:58 - Horovod not found in current environment. Distribution via Horovod will be disabled.
+2021-03-12 14:48:01.922 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping enabled: False
+2021-03-12 14:48:01.922 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:175 - Feature sweeping timeout: 86400
+2021-03-12 14:48:03.344 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 14:48:03.578 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 14:48:03.578 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=14207.62[ms]
+2021-03-12 14:48:03.579 - CRITICAL - 5771 - azureml.train.automl.run.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 701, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 14:48:03.580 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=14394.61[ms]
+2021-03-12 15:07:45.723 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 15:07:45.739 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 15:07:45.745 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-03-12 15:07:45.899 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=154.24[ms]
+2021-03-12 15:07:45.899 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=160.36[ms]
+2021-03-12 15:07:45.900 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-03-12 15:07:46.400 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping enabled: False
+2021-03-12 15:07:46.400 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:175 - Feature sweeping timeout: 86400
+2021-03-12 15:07:46.435 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:07:46.755 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:07:46.756 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=855.56[ms]
+2021-03-12 15:07:46.758 - CRITICAL - 5771 - azureml.train.automl.run.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 701, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:07:46.758 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=1034.73[ms]
+2021-03-12 15:36:43.367 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 15:36:43.374 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-03-12 15:36:43.397 - INFO - 5771 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-03-12 15:36:44.155 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=757.95[ms]
+2021-03-12 15:36:44.155 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=780.53[ms]
+2021-03-12 15:36:44.156 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-03-12 15:36:46.331 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping enabled: False
+2021-03-12 15:36:46.331 - INFO - 5771 - azureml.automl.runtime.featurization.data_transformer.__init__:175 - Feature sweeping timeout: 86400
+2021-03-12 15:36:46.369 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:36:47.156 - CRITICAL - 5771 - azureml.train.automl._model_download_utilities.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:36:47.156 - INFO - 5771 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=3000.44[ms]
+2021-03-12 15:36:47.157 - CRITICAL - 5771 - azureml.train.automl.run.log_traceback:224 - Type: Unclassified
+Class: AttributeError
+Message: /anaconda/envs/azureml_py36/lib/libxgboost.so: undefined symbol: XGBoosterUnserializeFromBuffer
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 701, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 90, in _download_automl_model
+    model = _load_automl_model(model_path)
+  File "_model_download_utilities.py", line 174, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "core.py", line 1088, in __setstate__
+    _LIB.XGBoosterUnserializeFromBuffer(handle, ptr, length))
+  File "__init__.py", line 361, in __getattr__
+    func = self.__getitem__(name)
+  File "__init__.py", line 366, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+
+ExceptionTarget: Unspecified
+2021-03-12 15:36:47.158 - INFO - 5771 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=3790.31[ms]
+2021-03-24 21:48:06.913 - INFO - 4755 - azureml.train.automl.automlconfig._start_execution:206 - Submitting remote.
+2021-03-24 22:48:25.796 - INFO - 4755 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-03-24 22:48:25.807 - INFO - 4755 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2021-03-24 22:48:25.817 - INFO - 4755 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-03-24 22:48:25.930 - INFO - 4755 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=112.91[ms]
+2021-03-24 22:48:25.977 - INFO - 4755 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=169.97[ms]
+2021-03-24 22:48:25.977 - INFO - 4755 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2021-03-24 22:48:38.124 - INFO - 4755 - azureml.automl.runtime.distributed.utilities.horovod_initialized:58 - Horovod not found in current environment. Distribution via Horovod will be disabled.
+2021-03-24 22:48:41.265 - INFO - 4755 - azureml.automl.runtime.featurization.data_transformer.__init__:174 - Feature sweeping enabled: False
+2021-03-24 22:48:41.266 - INFO - 4755 - azureml.automl.runtime.featurization.data_transformer.__init__:175 - Feature sweeping timeout: 86400
+2021-03-24 22:48:44.235 - INFO - 4755 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=18257.56[ms]
+2021-03-24 22:48:44.278 - INFO - 4755 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=18482.33[ms]
+2021-03-24 22:56:48.141 - INFO - 4755 - azureml.train.automl.run._log_activity:55 - ActivityStarted: RegisterModel
+2021-03-24 22:56:48.178 - INFO - 4755 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2021-03-24 22:56:48.311 - INFO - 4755 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=133.49[ms]
+2021-03-24 22:56:49.599 - INFO - 4755 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=RegisterModel, HowEnded=Success, Duration=1457.89[ms]
