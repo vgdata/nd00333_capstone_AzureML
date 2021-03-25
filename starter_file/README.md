@@ -93,7 +93,7 @@ To improve the model we can use different target metric to get broader perspecti
 <img src="Screenshots/hyperdrive_run1.PNG">
 <img src="Screenshots/hyperdrive_run2.PNG">
 <img src="Screenshots/hd_best_run1.PNG">
-<img src="Screenshots/hyperdrive_bestmodel2.PNG">
+<img src="Screenshots/hyperdrive_best_model2.PNG">
 
 **Best HyperDrive Model Registered**
 
