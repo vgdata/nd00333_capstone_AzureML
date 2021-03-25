@@ -113,8 +113,8 @@ The model is successfully deployed as a web service and a REST endpoint is creat
 <img src="Screenshots/deploy_service_logs.PNG">
 
 <img src="Screenshots/epoint1.PNG">
-<img src="Screenshots/epoint1.PNG">
-<img src="Screenshots/epoint1.PNG">
+<img src="Screenshots/epoint2.PNG">
+<img src="Screenshots/epoint3.PNG">
 
 ###Endpoint Testing
 
