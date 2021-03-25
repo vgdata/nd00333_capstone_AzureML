@@ -80,7 +80,7 @@ The parameters used for hyperparameter tuning are:
 - Max Iterations (max_iter) with values 50, 100, 150 and 200
     -- Maximum number of iterations to converge
 
-<img src="Screenshots/hyperdrive_run.PNG">
+<img src="Screenshots/Hyperdrive_run.PNG">
 
 ### Results
 The best Accuracy for the HyperDrive model is 0.7833333333333333
